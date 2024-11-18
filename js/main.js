@@ -96,62 +96,62 @@
     }
   }
 
-  function affixSidebarInit() {
-    var $affixAside = jQuery(".affix-aside");
-    if ($affixAside.length) {
-      //on stick and unstick event
-      $affixAside
-        .on("affix.bs.affix", function (e) {
-          var affixWidth = $affixAside.width() - 1;
-          var affixLeft = $affixAside.offset().left;
-          $affixAside.width(affixWidth).css("left", affixLeft);
-        })
-        .on("affix-top.bs.affix affix-bottom.bs.affix", function (e) {
-          $affixAside.css({ width: "", left: "" });
-        });
+  // function affixSidebarInit() {
+  //   var $affixAside = jQuery(".affix-aside");
+  //   if ($affixAside.length) {
+  //     //on stick and unstick event
+  //     $affixAside
+  //       .on("affix.bs.affix", function (e) {
+  //         var affixWidth = $affixAside.width() - 1;
+  //         var affixLeft = $affixAside.offset().left;
+  //         $affixAside.width(affixWidth).css("left", affixLeft);
+  //       })
+  //       .on("affix-top.bs.affix affix-bottom.bs.affix", function (e) {
+  //         $affixAside.css({ width: "", left: "" });
+  //       });
 
-      //counting offset
-      var offsetTop =
-        $affixAside.offset().top - jQuery(".page_header").height();
-      var offsetBottom =
-        jQuery(".page_footer").outerHeight(true) +
-        jQuery(".page_copyright").outerHeight(true);
+  //     //counting offset
+  //     // var offsetTop =
+  //     //   $affixAside.offset().top - jQuery(".page_header").height();
+  //     // var offsetBottom =
+  //     //   jQuery(".page_footer").outerHeight(true) +
+  //     //   jQuery(".page_copyright").outerHeight(true);
 
-      $affixAside.affix({
-        offset: {
-          top: offsetTop,
-          bottom: offsetBottom,
-        },
-      });
+  //     // $affixAside.affix({
+  //     //   offset: {
+  //     //     top: offsetTop,
+  //     //     bottom: offsetBottom,
+  //     //   },
+  //     // });
 
-      jQuery(window).on("resize", function () {
-        $affixAside.css({ width: "", left: "" });
+  //     jQuery(window).on("resize", function () {
+  //       $affixAside.css({ width: "", left: "" });
 
-        if ($affixAside.hasClass("affix")) {
-          //returning sidebar in top position if it is sticked because of unexpacted behavior
-          $affixAside
-            .removeClass("affix")
-            .css("left", "")
-            .addClass("affix-top");
-        }
+  //       if ($affixAside.hasClass("affix")) {
+  //         //returning sidebar in top position if it is sticked because of unexpacted behavior
+  //         $affixAside
+  //           .removeClass("affix")
+  //           .css("left", "")
+  //           .addClass("affix-top");
+  //       }
 
-        var offsetTop =
-          jQuery(".page_topline").outerHeight(true) +
-          jQuery(".page_toplogo").outerHeight(true) +
-          jQuery(".page_header").outerHeight(true) +
-          jQuery(".page_breadcrumbs").outerHeight(true) +
-          jQuery(".blog_slider").outerHeight(true);
-        var offsetBottom =
-          jQuery(".page_footer").outerHeight(true) +
-          jQuery(".page_copyright").outerHeight(true);
+  //       var offsetTop =
+  //         jQuery(".page_topline").outerHeight(true) +
+  //         jQuery(".page_toplogo").outerHeight(true) +
+  //         jQuery(".page_header").outerHeight(true) +
+  //         jQuery(".page_breadcrumbs").outerHeight(true) +
+  //         jQuery(".blog_slider").outerHeight(true);
+  //       var offsetBottom =
+  //         jQuery(".page_footer").outerHeight(true) +
+  //         jQuery(".page_copyright").outerHeight(true);
 
-        $affixAside.data("bs.affix").options.offset.top = offsetTop;
-        $affixAside.data("bs.affix").options.offset.bottom = offsetBottom;
+  //       $affixAside.data("bs.affix").options.offset.top = offsetTop;
+  //       $affixAside.data("bs.affix").options.offset.bottom = offsetBottom;
 
-        $affixAside.affix("checkPosition");
-      });
-    } //eof checking of affix sidebar existing
-  }
+  //       $affixAside.affix("checkPosition");
+  //     });
+  //   } //eof checking of affix sidebar existing
+  // }
 
   //helper functions to init elements only when they appears in viewport (jQUery.appear plugin)
   function initAnimateElement(self, index) {
@@ -175,47 +175,48 @@
       transition_delay: 300,
     });
   }
-  function initChart(el) {
-    var data = el.data();
-    var size = data.size ? data.size : 270;
-    var line = data.line ? data.line : 20;
-    var bgcolor = data.bgcolor ? data.bgcolor : "#ffffff";
-    var trackcolor = data.trackcolor ? data.trackcolor : "#c14240";
-    var speed = data.speed ? data.speed : 3000;
+  // function initChart(el) {
+  //   var data = el.data();
+  //   var size = data.size ? data.size : 270;
+  //   var line = data.line ? data.line : 20;
+  //   var bgcolor = data.bgcolor ? data.bgcolor : "#ffffff";
+  //   var trackcolor = data.trackcolor ? data.trackcolor : "#c14240";
+  //   var speed = data.speed ? data.speed : 3000;
 
-    el.easyPieChart({
-      barColor: trackcolor,
-      trackColor: bgcolor,
-      scaleColor: false,
-      scaleLength: false,
-      lineCap: "butt",
-      lineWidth: line,
-      size: size,
-      rotate: 0,
-      animate: speed,
-      onStep: function (from, to, percent) {
-        jQuery(this.el).find(".percent").text(Math.round(percent));
-      },
-    });
-  }
+  //   el.easyPieChart({
+  //     barColor: trackcolor,
+  //     trackColor: bgcolor,
+  //     scaleColor: false,
+  //     scaleLength: false,
+  //     lineCap: "butt",
+  //     lineWidth: line,
+  //     size: size,
+  //     rotate: 0,
+  //     animate: speed,
+  //     onStep: function (from, to, percent) {
+  //       jQuery(this.el).find(".percent").text(Math.round(percent));
+  //     },
+  //   });
+  // }
 
   //wrap select element in select-group
-  function wrapSelect() {
-    jQuery(".wrap-select-group, .cryptonatorwidget select").each(function () {
-      var $select = jQuery(this);
-      if ($select.hasClass("select2-hidden-accessible")) {
-        return;
-      }
-      $select
-        .wrap('<div class="form-group select-group"></div>')
-        .after(
-          '<i class="fa fa-angle-down theme_button color1 no_bg_button" aria-hidden="true"></i>'
-        );
-      if ($select.hasClass("wrap-select-group")) {
-        $select.addClass("empty choice");
-      }
-    });
-  }
+ 
+  // function wrapSelect() {
+  //   jQuery(".wrap-select-group, .cryptonatorwidget select").each(function () {
+  //     var $select = jQuery(this);
+  //     if ($select.hasClass("select2-hidden-accessible")) {
+  //       return;
+  //     }
+  //     $select
+  //       .wrap('<div class="form-group select-group"></div>')
+  //       .after(
+  //         '<i class="fa fa-angle-down theme_button color1 no_bg_button" aria-hidden="true"></i>'
+  //       );
+  //     if ($select.hasClass("wrap-select-group")) {
+  //       $select.addClass("empty choice");
+  //     }
+  //   });
+  // }
 
   //equalize header side columns width
   function headerColumnsEqualize() {
@@ -610,142 +611,142 @@
     });
 
     //MailChimp subscribe form processing
-    jQuery(".signup").on("submit", function (e) {
-      e.preventDefault();
-      var $form = jQuery(this);
-      // update user interface
-      $form.find(".response").html("Adding email address...");
-      // Prepare query string and send AJAX request
-      jQuery.ajax({
-        url: "mailchimp/store-address.php",
-        data:
-          "ajax=true&email=" +
-          escape($form.find(".mailchimp_email").val()) +
-          "&fullname=" +
-          escape($form.find(".mailchimp_fullname").val()),
-        success: function (msg) {
-          $form.find(".response").html(msg);
-        },
-      });
-    });
+    // jQuery(".signup").on("submit", function (e) {
+    //   e.preventDefault();
+    //   var $form = jQuery(this);
+    //   // update user interface
+    //   $form.find(".response").html("Adding email address...");
+    //   // Prepare query string and send AJAX request
+    //   jQuery.ajax({
+    //     url: "mailchimp/store-address.php",
+    //     data:
+    //       "ajax=true&email=" +
+    //       escape($form.find(".mailchimp_email").val()) +
+    //       "&fullname=" +
+    //       escape($form.find(".mailchimp_fullname").val()),
+    //     success: function (msg) {
+    //       $form.find(".response").html(msg);
+    //     },
+    //   });
+    // });
 
     //twitter
-    if (jQuery().tweet) {
-      jQuery(".twitter").tweet({
-        modpath: "./twitter/",
-        count: 2,
-        avatar_size: 48,
-        loading_text: "loading twitter feed...",
-        join_text: "auto",
-        username: "michaeljackson",
-        template:
-          '<span class="tweet_text">{tweet_text}</span><span class="greylinks black small-text"> {time}</span>',
-      });
-    }
+    // if (jQuery().tweet) {
+    //   jQuery(".twitter").tweet({
+    //     modpath: "./twitter/",
+    //     count: 2,
+    //     avatar_size: 48,
+    //     loading_text: "loading twitter feed...",
+    //     join_text: "auto",
+    //     username: "michaeljackson",
+    //     template:
+    //       '<span class="tweet_text">{tweet_text}</span><span class="greylinks black small-text"> {time}</span>',
+    //   });
+    // }
 
-    //adding CSS classes for elements that needs different styles depending on they widht width
-    //see 'plugins.js' file
-    jQuery("#mainteasers .col-lg-4").addWidthClass({
-      breakpoints: [500, 600],
-    });
+    // //adding CSS classes for elements that needs different styles depending on they widht width
+    // //see 'plugins.js' file
+    // jQuery("#mainteasers .col-lg-4").addWidthClass({
+    //   breakpoints: [500, 600],
+    // });
 
     // init timetable
-    var $timetable = jQuery("#timetable");
-    if ($timetable.length) {
-      // bind filter click
-      jQuery("#timetable_filter").on("click", "a", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var $thisA = jQuery(this);
-        if ($thisA.hasClass("selected")) {
-          // return false;
-          return;
-        }
-        var selector = $thisA.attr("data-filter");
-        $timetable
-          .find("tbody td")
-          .removeClass("current")
-          .end()
-          .find(selector)
-          .closest("td")
-          .addClass("current");
-        $thisA.closest("ul").find("a").removeClass("selected");
-        $thisA.addClass("selected");
-      });
-    }
+    // var $timetable = jQuery("#timetable");
+    // if ($timetable.length) {
+    //   // bind filter click
+    //   jQuery("#timetable_filter").on("click", "a", function (e) {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     var $thisA = jQuery(this);
+    //     if ($thisA.hasClass("selected")) {
+    //       // return false;
+    //       return;
+    //     }
+    //     var selector = $thisA.attr("data-filter");
+    //     $timetable
+    //       .find("tbody td")
+    //       .removeClass("current")
+    //       .end()
+    //       .find(selector)
+    //       .closest("td")
+    //       .addClass("current");
+    //     $thisA.closest("ul").find("a").removeClass("selected");
+    //     $thisA.addClass("selected");
+    //   });
+    // }
 
     /////////
     //SHOP///
     /////////
-    jQuery("#toggle_shop_view").on("click", function (e) {
-      e.preventDefault();
-      jQuery(this).toggleClass("grid-view");
-      jQuery("#products").toggleClass("grid-view list-view");
-    });
-    //zoom image
-    if (jQuery().elevateZoom) {
-      jQuery("#product-image").elevateZoom({
-        gallery: "product-image-gallery",
-        cursor: "pointer",
-        galleryActiveClass: "active",
-        responsive: true,
-        loadingIcon: "img/AjaxLoader.gif",
-      });
-    }
+    // jQuery("#toggle_shop_view").on("click", function (e) {
+    //   e.preventDefault();
+    //   jQuery(this).toggleClass("grid-view");
+    //   jQuery("#products").toggleClass("grid-view list-view");
+    // });
+    // //zoom image
+    // if (jQuery().elevateZoom) {
+    //   jQuery("#product-image").elevateZoom({
+    //     gallery: "product-image-gallery",
+    //     cursor: "pointer",
+    //     galleryActiveClass: "active",
+    //     responsive: true,
+    //     loadingIcon: "img/AjaxLoader.gif",
+    //   });
+    // }
 
     //add review button
-    jQuery(".review-link").on("click", function (e) {
-      var $thisLink = jQuery(this);
-      var reviewTabLink = jQuery('a[href="#reviews_tab"]');
-      //show tab only if it's hidden
-      if (!reviewTabLink.parent().hasClass("active")) {
-        reviewTabLink.tab("show").on("shown.bs.tab", function (e) {
-          $window.scrollTo($thisLink.attr("href"), 400);
-        });
-      }
-      $window.scrollTo($thisLink.attr("href"), 400);
-    });
+    // jQuery(".review-link").on("click", function (e) {
+    //   var $thisLink = jQuery(this);
+    //   var reviewTabLink = jQuery('a[href="#reviews_tab"]');
+    //   //show tab only if it's hidden
+    //   if (!reviewTabLink.parent().hasClass("active")) {
+    //     reviewTabLink.tab("show").on("shown.bs.tab", function (e) {
+    //       $window.scrollTo($thisLink.attr("href"), 400);
+    //     });
+    //   }
+    //   $window.scrollTo($thisLink.attr("href"), 400);
+    // });
 
     //product counter
-    jQuery(".plus, .minus").on("click", function (e) {
-      var numberField = jQuery(this).parent().find('[type="number"]');
-      var currentVal = numberField.val();
-      var sign = jQuery(this).val();
-      if (sign === "-") {
-        if (currentVal > 1) {
-          numberField.val(parseFloat(currentVal) - 1);
-        }
-      } else {
-        numberField.val(parseFloat(currentVal) + 1);
-      }
-    });
+    // jQuery(".plus, .minus").on("click", function (e) {
+    //   var numberField = jQuery(this).parent().find('[type="number"]');
+    //   var currentVal = numberField.val();
+    //   var sign = jQuery(this).val();
+    //   if (sign === "-") {
+    //     if (currentVal > 1) {
+    //       numberField.val(parseFloat(currentVal) - 1);
+    //     }
+    //   } else {
+    //     numberField.val(parseFloat(currentVal) + 1);
+    //   }
+    // });
 
     //remove product from cart
-    jQuery("a.remove").on("click", function (e) {
-      e.preventDefault();
-      jQuery(this).closest("tr, .media").remove();
-    });
+    // jQuery("a.remove").on("click", function (e) {
+    //   e.preventDefault();
+    //   jQuery(this).closest("tr, .media").remove();
+    // });
 
     //price filter - only for HTML
-    if (jQuery().slider) {
-      var $rangeSlider = jQuery(".slider-range-price");
-      if ($rangeSlider.length) {
-        var $priceMin = jQuery(".price_from");
-        var $priceMax = jQuery(".price_to");
-        $rangeSlider.slider({
-          range: true,
-          min: 0,
-          max: 200,
-          values: [30, 100],
-          slide: function (event, ui) {
-            $priceMin.html("$" + ui.values[0]);
-            $priceMax.html("$" + ui.values[1]);
-          },
-        });
-        $priceMin.html("$" + $rangeSlider.slider("values", 0));
-        $priceMax.html("$" + $rangeSlider.slider("values", 1));
-      }
-    }
+    // if (jQuery().slider) {
+    //   var $rangeSlider = jQuery(".slider-range-price");
+    //   if ($rangeSlider.length) {
+    //     var $priceMin = jQuery(".price_from");
+    //     var $priceMax = jQuery(".price_to");
+    //     $rangeSlider.slider({
+    //       range: true,
+    //       min: 0,
+    //       max: 200,
+    //       values: [30, 100],
+    //       slide: function (event, ui) {
+    //         $priceMin.html("$" + ui.values[0]);
+    //         $priceMax.html("$" + ui.values[1]);
+    //       },
+    //     });
+    //     $priceMin.html("$" + $rangeSlider.slider("values", 0));
+    //     $priceMax.html("$" + $rangeSlider.slider("values", 1));
+    //   }
+    // }
 
     //color filter
     jQuery(".color-filters")
@@ -967,12 +968,12 @@
     ////////////////////
     //triggered search//
     ////////////////////
-    jQuery(".search_form_trigger").on("click", function ($e) {
-      $e.preventDefault();
-      jQuery(".search_form_trigger, .search_form_wrapper").toggleClass(
-        "active"
-      );
-    });
+    // jQuery(".search_form_trigger").on("click", function ($e) {
+    //   $e.preventDefault();
+    //   jQuery(".search_form_trigger, .search_form_wrapper").toggleClass(
+    //     "active"
+    //   );
+    // });
 
     ////////////////
     //owl carousel//
@@ -1190,67 +1191,69 @@
         });
       }
     } //appear check
+///////////////////////////////////////////////////////////
 
     //Flickr widget
     // use http://idgettr.com/ to find your ID
-    if (jQuery().jflickrfeed) {
-      var $flickr = jQuery("#flickr, .flickr_ul");
-      if ($flickr.length) {
-        if (!$flickr.hasClass("flickr_loaded")) {
-          $flickr
-            .jflickrfeed(
-              {
-                flickrbase: "http://api.flickr.com/services/feeds/",
-                limit: 4,
-                qstrings: {
-                  id: "131791558@N04",
-                },
-                itemTemplate:
-                  '<a href="{{image_b}}" data-gal="prettyPhoto[pp_gal]"><li><img alt="{{title}}" src="{{image_m}}" /></li></a>',
-              },
-              function (data) {
-                $flickr.find("a").prettyPhoto({
-                  hook: "data-gal",
-                  theme: "facebook",
-                });
-              }
-            )
-            .addClass("flickr_loaded");
-        }
-      }
-    }
+    // if (jQuery().jflickrfeed) {
+    //   var $flickr = jQuery("#flickr, .flickr_ul");
+    //   if ($flickr.length) {
+    //     if (!$flickr.hasClass("flickr_loaded")) {
+    //       $flickr
+    //         .jflickrfeed(
+    //           {
+    //             flickrbase: "http://api.flickr.com/services/feeds/",
+    //             limit: 4,
+    //             qstrings: {
+    //               id: "131791558@N04",
+    //             },
+    //             itemTemplate:
+    //               '<a href="{{image_b}}" data-gal="prettyPhoto[pp_gal]"><li><img alt="{{title}}" src="{{image_m}}" /></li></a>',
+    //           },
+    //           function (data) {
+    //             $flickr.find("a").prettyPhoto({
+    //               hook: "data-gal",
+    //               theme: "facebook",
+    //             });
+    //           }
+    //         )
+    //         .addClass("flickr_loaded");
+    //     }
+    //   }
+    // }
 
     // Instagram widget
-    if (jQuery().spectragram) {
-      var Spectra = {
-        instaToken: "3905738328.60c782d.b65ed3f058d64e6ab32c110c6ac12d9b",
-        instaID: "60c782dfecaf4050b59ff4c159246641",
+    // if (jQuery().spectragram) {
+    //   var Spectra = {
+    //     instaToken: "3905738328.60c782d.b65ed3f058d64e6ab32c110c6ac12d9b",
+    //     instaID: "60c782dfecaf4050b59ff4c159246641",
 
-        init: function () {
-          jQuery.fn.spectragram.accessData = {
-            accessToken: this.instaToken,
-            clientID: this.instaID,
-          };
+    //     init: function () {
+    //       jQuery.fn.spectragram.accessData = {
+    //         accessToken: this.instaToken,
+    //         clientID: this.instaID,
+    //       };
 
-          //available methods: getUserFeed, getRecentTagged
-          jQuery(".instafeed").each(function () {
-            var $this = jQuery(this);
-            if ($this.find("img").length) {
-              return;
-            }
-            $this.spectragram("getRecentTagged", {
-              max: 4,
-              //pass username if you are using getUserFeed method
-              query: "grey",
-              wrapEachWith: '<div class="photo">',
-            });
-          });
-        },
-      };
+    //       //available methods: getUserFeed, getRecentTagged
+    //       jQuery(".instafeed").each(function () {
+    //         var $this = jQuery(this);
+    //         if ($this.find("img").length) {
+    //           return;
+    //         }
+    //         $this.spectragram("getRecentTagged", {
+    //           max: 4,
+    //           //pass username if you are using getUserFeed method
+    //           query: "grey",
+    //           wrapEachWith: '<div class="photo">',
+    //         });
+    //       });
+    //     },
+    //   };
 
-      Spectra.init();
-    }
+    //   Spectra.init();
+    // }
 
+////////////////////////////////////////////////
     //video images preview - from WP
     jQuery(".embed-placeholder").each(function () {
       jQuery(this).on("click", function (e) {

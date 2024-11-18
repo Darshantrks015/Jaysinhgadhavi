@@ -19,7 +19,7 @@ slideDown
 */
 
 
-.slideDown{
+/* .slideDown{
 	animation-name: slideDown;
 	-webkit-animation-name: slideDown;
 
@@ -72,7 +72,7 @@ slideDown
 	100% {
 		-webkit-transform: translateY(0%);
 	}
-}
+} */
 
 /*
 ==============================================
@@ -81,7 +81,7 @@ slideUp
 */
 
 
-.slideUp{
+/* .slideUp{
 	animation-name: slideUp;
 	-webkit-animation-name: slideUp;
 
@@ -134,7 +134,7 @@ slideUp
 	100% {
 		-webkit-transform: translateY(0%);
 	}
-}
+} */
 
 /*
 ==============================================
@@ -142,7 +142,7 @@ slideLeft
 ==============================================
 */
 
-
+/* 
 .slideLeft{
 	animation-name: slideLeft;
 	-webkit-animation-name: slideLeft;
@@ -196,14 +196,14 @@ slideLeft
 	100% {
 		-webkit-transform: translateX(0%);
 	}
-}
+} */
 
 /*
 ==============================================
 slideRight
 ==============================================
 */
-
+/* 
 
 .slideRight{
 	animation-name: slideRight;
@@ -258,7 +258,7 @@ slideRight
 	100% {
 		-webkit-transform: translateX(0%);
 	}
-}
+} */
 
 /*
 ==============================================
@@ -267,7 +267,7 @@ slideExpandUp
 */
 
 
-.slideExpandUp{
+/* .slideExpandUp{
 	animation-name: slideExpandUp;
 	-webkit-animation-name: slideExpandUp;
 
@@ -338,7 +338,7 @@ slideExpandUp
 	100%{
 		-webkit-transform: translateY(0%) scaleX(1);
 	}
-}
+} */
 
 /*
 ==============================================
@@ -346,7 +346,7 @@ expandUp
 ==============================================
 */
 
-
+/* 
 .expandUp{
 	animation-name: expandUp;
 	-webkit-animation-name: expandUp;
@@ -388,7 +388,7 @@ expandUp
 	100% {
 		-webkit-transform: translateY(0%) scale(1) scaleY(1);
 	}
-}
+} */
 
 /*
 ==============================================
@@ -451,7 +451,7 @@ expandOpen
 ==============================================
 */
 
-
+/* 
 .expandOpen{
 	animation-name: expandOpen;
 	-webkit-animation-name: expandOpen;
@@ -499,7 +499,7 @@ expandOpen
 	100% {
 		-webkit-transform: scale(1);
 	}	
-}
+} */
 
 /*
 ==============================================
@@ -507,7 +507,7 @@ bigEntrance
 ==============================================
 */
 
-
+/* 
 .bigEntrance{
 	animation-name: bigEntrance;
 	-webkit-animation-name: bigEntrance;
@@ -581,7 +581,7 @@ bigEntrance
 		-webkit-transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
 		opacity: 1;
 	}
-}
+} */
 
 /*
 ==============================================
@@ -589,7 +589,7 @@ hatch
 ==============================================
 */
 
-.hatch{
+/* .hatch{
 	animation-name: hatch;
 	-webkit-animation-name: hatch;
 
@@ -652,7 +652,7 @@ hatch
 	100% {
 		-webkit-transform: rotate(0deg);
 	}
-}
+} */
 
 
 /*
@@ -660,7 +660,7 @@ hatch
 bounce
 ==============================================
 */
-
+/* 
 
 .bounce{
 	animation-name: bounce;
@@ -717,7 +717,7 @@ bounce
 	100%{
 		-webkit-transform: translateY(0%) scaleY(1) scaleX(1);
 	}
-}
+} */
 
 
 /*
@@ -725,7 +725,7 @@ bounce
 pulse
 ==============================================
 */
-
+/* 
 .pulse{
 	animation-name: pulse;
 	-webkit-animation-name: pulse;
@@ -765,14 +765,14 @@ pulse
 		-webkit-transform: scale(0.95);
 		opacity: 0.7;
 	}
-}
+} */
 
 /*
 ==============================================
 floating
 ==============================================
 */
-
+/* 
 .floating{
 	animation-name: floating;
 	-webkit-animation-name: floating;
@@ -806,14 +806,14 @@ floating
 	100% {
 		-webkit-transform: translateY(0%);
 	}
-}
+} */
 
 /*
 ==============================================
 tossing
 ==============================================
 */
-
+/* 
 .tossing{
 	animation-name: tossing;
 	-webkit-animation-name: tossing;
@@ -847,7 +847,7 @@ tossing
 	100% {
 		-webkit-transform: rotate(-4deg);
 	}
-}
+} */
 
 /*
 ==============================================
@@ -855,7 +855,7 @@ pullUp
 ==============================================
 */
 
-.pullUp{
+/* .pullUp{
 	animation-name: pullUp;
 	-webkit-animation-name: pullUp;
 
@@ -916,7 +916,7 @@ pullUp
 	100% {
 		-webkit-transform: scaleY(1);
 	}
-}
+} */
 
 /*
 ==============================================
@@ -924,7 +924,7 @@ pullDown
 ==============================================
 */
 
-.pullDown{
+/* .pullDown{
 	animation-name: pullDown;
 	-webkit-animation-name: pullDown;
 
@@ -985,7 +985,7 @@ pullDown
 	100% {
 		-webkit-transform: scaleY(1);
 	}
-}
+} */
 
 /*
 ==============================================
@@ -993,7 +993,7 @@ stretchLeft
 ==============================================
 */
 
-.stretchLeft{
+/* .stretchLeft{
 	animation-name: stretchLeft;
 	-webkit-animation-name: stretchLeft;
 
@@ -1054,7 +1054,7 @@ stretchLeft
 	100% {
 		-webkit-transform: scaleX(1);
 	}
-}
+} */
 
 /*
 ==============================================
@@ -1062,7 +1062,7 @@ stretchRight
 ==============================================
 */
 
-.stretchRight{
+/* .stretchRight{
 	animation-name: stretchRight;
 	-webkit-animation-name: stretchRight;
 
@@ -1123,7 +1123,7 @@ stretchRight
 	100% {
 		-webkit-transform: scaleX(1);
 	}
-}
+} */
 
 
 
@@ -1207,7 +1207,8 @@ animation-name: fadeIn;
 	-o-animation-name: fadeInUp;
 	animation-name: fadeInUp;
 }
-@-webkit-keyframes fadeInDown {
+/* @-webkit-keyframes fadeInDown {
+
 	0% {
 		opacity: 0;
 		-webkit-transform: translateY(-20px);
@@ -1260,8 +1261,10 @@ animation-name: fadeIn;
 	-moz-animation-name: fadeInDown;
 	-o-animation-name: fadeInDown;
 	animation-name: fadeInDown;
-}
-@-webkit-keyframes fadeInLeft {
+} */
+
+
+/* @-webkit-keyframes fadeInLeft {
 	0% {
 		opacity: 0;
 		-webkit-transform: translateX(-20px);
@@ -1314,8 +1317,11 @@ animation-name: fadeIn;
 	-moz-animation-name: fadeInLeft;
 	-o-animation-name: fadeInLeft;
 	animation-name: fadeInLeft;
-}
-@-webkit-keyframes fadeInRight {
+} */
+
+
+
+/* @-webkit-keyframes fadeInRight {
 	0% {
 		opacity: 0;
 		-webkit-transform: translateX(20px);
@@ -1368,8 +1374,10 @@ animation-name: fadeIn;
 	-moz-animation-name: fadeInRight;
 	-o-animation-name: fadeInRight;
 	animation-name: fadeInRight;
-}
-@-webkit-keyframes fadeInUpBig {
+} */
+
+
+/* @-webkit-keyframes fadeInUpBig {
 	0% {
 		opacity: 0;
 		-webkit-transform: translateY(2000px);
@@ -1422,8 +1430,11 @@ animation-name: fadeIn;
 	-moz-animation-name: fadeInUpBig;
 	-o-animation-name: fadeInUpBig;
 	animation-name: fadeInUpBig;
-}
-@-webkit-keyframes fadeInDownBig {
+} */
+
+
+
+/* @-webkit-keyframes fadeInDownBig {
 	0% {
 		opacity: 0;
 		-webkit-transform: translateY(-2000px);
@@ -1477,6 +1488,8 @@ animation-name: fadeIn;
 	-o-animation-name: fadeInDownBig;
 	animation-name: fadeInDownBig;
 }
+
+
 @-webkit-keyframes fadeInLeftBig {
 	0% {
 		opacity: 0;
@@ -1581,8 +1594,10 @@ animation-name: fadeIn;
 	-moz-animation-name: fadeInRightBig;
 	-o-animation-name: fadeInRightBig;
 	animation-name: fadeInRightBig;
-}
-@-webkit-keyframes fadeOut {
+} */
+
+
+/* @-webkit-keyframes fadeOut {
 	0% {opacity: 1;}
 	100% {opacity: 0;}
 }
@@ -1607,8 +1622,10 @@ animation-name: fadeIn;
 	-moz-animation-name: fadeOut;
 	-o-animation-name: fadeOut;
 	animation-name: fadeOut;
-}
-@-webkit-keyframes fadeOutUp {
+} */
+
+
+/* @-webkit-keyframes fadeOutUp {
 	0% {
 		opacity: 1;
 		-webkit-transform: translateY(0);
@@ -2176,9 +2193,9 @@ animation-name: fadeIn;
 	100% {
 		transform: translateX(0);
 	}
-}
+} */
 
-.slideInRight {
+/* .slideInRight {
 	-webkit-animation-name: slideInRight;
 	-moz-animation-name: slideInRight;
 	-o-animation-name: slideInRight;
@@ -2333,8 +2350,10 @@ animation-name: fadeIn;
 	-moz-animation-name: slideOutRight;
 	-o-animation-name: slideOutRight;
 	animation-name: slideOutRight;
-}
+} */
 
+
+/* 
 @-webkit-keyframes moveFromLeft{
 	from {
 		-webkit-transform: translateX(-100%);
@@ -2374,8 +2393,8 @@ animation-name: fadeIn;
 	to {
 		transform: translateX(0%);
 	}
-}
-
+} */
+/* 
 .moveFromLeft {
 	-webkit-animation: moveFromLeft 400ms ease;
 	-moz-animation: moveFromLeft 400ms ease;
@@ -2478,9 +2497,9 @@ animation-name: fadeIn;
 	-ms-animation: moveFromBottom 400ms ease;
 	-o-animation: moveFromBottom 400ms ease;
 	animation: moveFromBottom 400ms ease;
-}
+} */
 
-
+/* 
 @-webkit-keyframes scaleDisappear {
 	0% {
 		opacity: 1;
@@ -2616,12 +2635,12 @@ animation-name: fadeIn;
 	-ms-animation: scaleAppear 750ms ease;
 	-o-animation: scaleAppear 750ms ease;
 	animation: scaleAppear 750ms ease;
-}
+} */
 
 /*
 Animation example, for spinners
 */
-.animate-spin {
+/* .animate-spin {
 	-moz-animation: spin 2s infinite linear;
 	-o-animation: spin 2s infinite linear;
 	-webkit-animation: spin 2s infinite linear;
@@ -2702,4 +2721,4 @@ Animation example, for spinners
 		-webkit-transform: rotate(359deg);
 		transform: rotate(359deg);
 	}
-}
+} */
